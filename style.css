@@ -1,0 +1,137 @@
+@font-face {
+  font-family: 'W95FA';
+  src: url('fonts/w95fa.woff2') format('woff2'),
+       url('fonts/w95fa.woff') format('woff');
+  font-display: swap;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  overflow: hidden;
+  background: #008080;
+  color: #000;
+  font-family: 'W95FA', 'MS Sans Serif', Arial, sans-serif;
+}
+
+#desktop {
+  position: fixed;
+  inset: 0;
+  background-color: #00807F;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#tools { display: none; }
+
+#upload-container {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  z-index: 5;
+}
+
+#upload-btn {
+  width: 160px;
+  height: 160px;
+  border-radius: 0;
+  display: grid;
+  place-items: center;
+  background: #c0c0c0;
+  border: 2px solid #000;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+#upload-btn img {
+  width: 88px;
+  height: 88px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+#upload-btn:hover { background: #d0d0d0; }
+
+#upload-btn:active { background: #a0a0a0; }
+
+.toolbar {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+  background: #c0c0c0;
+  padding: 6px 6px;
+  border: 2px solid #000;
+  border-radius: 0;
+}
+
+.tool-button {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 2px solid #000;
+  border-radius: 0;
+  background: #e0e0e0;
+  cursor: pointer;
+}
+
+.tool-button:hover {
+  background: #d0d0d0;
+}
+
+.tool-button img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  pointer-events: none;
+}
+
+.tool-button.active {
+  border-color: #ff0000;
+}
+
+@keyframes fallingShardStraight {
+  from {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  to {
+    transform: translate(var(--shard-x, 0), 300px);
+    opacity: 0.7;
+  }
+}
+
+.glass-shard {
+  animation: fallingShardStraight 1.2s linear forwards;
+  position: absolute;
+  left: -65px; 
+}
+
+.bullet-hole {
+  box-shadow: 0 0 4px 1px #000a;
+  pointer-events: none;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+} 
+
+.machine-gun-hole {
+  pointer-events: none;
+  image-rendering: pixelated;
+} 

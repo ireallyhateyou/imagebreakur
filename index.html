@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>imagebreakur</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preload" href="fonts/w95fa.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/w95fa.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="assets/hammer idle.png" as="image">
+  <link rel="preload" href="assets/stamp idle.png" as="image">
+  <link rel="preload" href="assets/machine gun idle.png" as="image">
+  <link rel="preload" href="assets/zapper idle.png" as="image">
+  <link rel="preload" href="assets/hammer click.png" as="image">
+  <link rel="preload" href="assets/stamp click.png" as="image">
+  <link rel="preload" href="assets/machine gun click1.png" as="image">
+  <link rel="preload" href="assets/zapper click1.png" as="image">
+  <link rel="preload" href="assets/zap1.png" as="image">
+  <link rel="preload" href="assets/zap2.png" as="image">
+  <link rel="preload" href="assets/shattered glass.png" as="image">
+  <link rel="preload" href="assets/glass break 1.png" as="image">
+  <link rel="preload" href="assets/glass break 2.png" as="image">
+  <link rel="preload" href="assets/glass break 3.png" as="image">
+</head>
+<body>
+  <main id="desktop">
+    <div id="upload-container">
+      <button id="upload-btn" aria-label="Upload image" title="Upload image"><img src="assets/floppy.png" alt="Upload"></button>
+      <input type="file" id="bg-file-input" accept="image/*" hidden>
+    </div>
+
+    <div class="toolbar" id="tools">
+      <button class="tool-button" data-tool="hammer" title="Hammer">
+        <img src="assets/hammer idle.png" alt="Hammer">
+      </button>
+      <button class="tool-button" data-tool="machine-gun" title="Machine Gun">
+        <img src="assets/machine gun idle.png" alt="Machine Gun">
+      </button>
+      <button class="tool-button" data-tool="stamp" title="Stamp">
+        <img src="assets/stamp idle.png" alt="Stamp">
+      </button>
+      <button class="tool-button" data-tool="zapper" title="Zapper">
+        <img src="assets/zapper idle.png" alt="Zapper">
+      </button>
+      <button class="tool-button" data-tool="reset" title="Reset">
+        <img src="assets/reset.png" alt="Reset">
+      </button>
+    </div>
+  </main>
+
+  <div id="custom-cursor" style="display:none; position:fixed; pointer-events:none; z-index:99999;"></div>
+  <script src="script.js"></script>
+</body>
+</html>
